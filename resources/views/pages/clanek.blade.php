@@ -1,0 +1,11 @@
+<x-title>
+    <p>{{ $article['title'] }}</p>
+    <div class="text-sm font-normal text-left md:w-1/2 md:mx-auto">
+        Publikováno: <b>{{ date('d.m.Y', strtotime($article['created_at'])); }}</b>
+    </div>
+</x-title>
+<section class="pb-12">
+    <div class="prose text-justify content text-primary">
+        {!! $article['body'] !!}
+    </div>
+</section>
