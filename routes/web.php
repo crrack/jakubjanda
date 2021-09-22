@@ -17,6 +17,7 @@ $router->get('/', ['as' => 'home-page', 'uses' => 'IndexController@show']);
 $router->get('clanky', ['uses' => 'ArticleController@all']);
 $router->get('clanek/{slug}', ['uses' => 'ArticleController@show']);
 
-$router->post('contact/send', ['uses' => 'ContactController@send']);
+$router->post('contact-form/send', ['uses' => 'ContactFormController@send']);
+$router->post('send-pdf/send', ['uses' => 'SendPdfController@send']);
 
 $router->get('{page}', ['uses' => 'PageController@show']);

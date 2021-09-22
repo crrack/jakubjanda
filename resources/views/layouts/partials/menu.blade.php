@@ -1,11 +1,11 @@
 <div class="w-1/2">
-    <a href="#" class="absolute top-0 right-0 px-4 py-5 text-3xl text-gray-800 menu-open lg:hidden">
+    <button @click="menu_open = true" class="absolute top-0 right-0 px-4 py-5 text-3xl text-gray-800 lg:hidden">
         <img src="http://jakubjanda.cz/theme/img/menu.svg" alt="Otevřít menu" width="36px">
-    </a>
-    <div class="fixed top-0 left-0 hidden w-full h-screen py-32 text-lg tracking-wide text-center uppercase bg-white menu-items lg:flex lg:h-auto lg:bg-transparent lg:relative text-primary lg:text-white lg:text-sm lg:py-10">
-        <a href="#" class="absolute top-0 right-0 px-4 py-5 text-3xl text-gray-800 menu-close lg:hidden">
+    </button>
+    <div :class="{ 'hidden': !menu_open, 'block': menu_open }" class="fixed top-0 left-0 z-50 w-full h-screen py-32 text-lg tracking-wide text-center uppercase bg-white menu-items lg:flex lg:h-auto lg:bg-transparent lg:relative text-primary lg:text-white lg:text-sm lg:py-10">
+        <button @click="menu_open = false" class="absolute top-0 right-0 px-4 py-5 text-3xl text-gray-800 lg:hidden">
             <img src="http://jakubjanda.cz/theme/img/close.svg" alt="Zavřít menu" width="36px">
-        </a>
+        </button>
         <a x-link="/"class="block w-full pt-4 lg:-ml-12 lg:pt-0 lg:px-4 lg:w-auto">Domů</a>
         <a x-link="zivotopis" class="block w-full pt-4 lg:pt-0 lg:px-4 lg:w-auto">Životopis</a>
         <a x-link="politika" class="block w-full pt-4 lg:pt-0 lg:px-4 lg:w-auto">Politika</a>

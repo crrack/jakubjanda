@@ -8,9 +8,6 @@ document.addEventListener('alpine:init', () => {
             this.$nextTick(() => { 
                 var char = '?';
                 if(page.includes('?')) char = '&';
-
-                
-
                 var url = page;
                 if(!page.includes('http')) {
                     if(url.substring(0, 1) != '/') url = '/' + url;

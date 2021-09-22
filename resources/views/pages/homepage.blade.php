@@ -1,4 +1,18 @@
 <div>
+    <section x-data="{show: true}" x-show="show" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40">
+        <div class="relative w-full max-w-lg px-10 py-8 mb-12 bg-white text-primary" @click.away="show = false">
+            <h4 class="mb-1 text-2xl font-bold">Zpráva o mandátu</h4>
+            <p class="mb-4">Nechte si poslat naši zprávu o mandátu na Váš email.</p>
+            <a x-link="zprava-o-mandatu" class="tracking-wide text-white btn bg-primary">
+                Přejít na stránku o mandátu
+            </a>
+            <button @click="show = false" class="absolute top-4 right-4">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+    </section>
     <section class="header">
         <div class="flex flex-col-reverse content md:flex-row">
             <div class="w-full px-8 md:w-1/2 lg:pr-24 md:py-8 text-primary">
@@ -32,12 +46,12 @@
         <a 
             href="https://sportovni-reforma.cz" 
             style="background-image: url('https://sportovni-reforma.cz/img/header.jpg')" 
-            class="w-full max-w-xl bg-center bg-cover text-primary"
+            class="w-full max-w-2xl bg-center bg-cover text-primary"
         >
             <div class="z-30 inline-flex items-center justify-between w-full h-full px-8 py-3 text-white bg-primary bg-opacity-70">
                 <div class="">
                     <p class="text-4xl font-bold">Sportovní reforma</p>
-                    <p class="text-lg">Delší popisující text menším textem.</p>
+                    <p class="text-lg">Postavme sport znovu na nohy!</p>
                 </div>
                 <div class="">
                     <button href="https://sportovni-reforma.cz" class="my-8 text-base tracking-wide text-white btn bg-primary">
