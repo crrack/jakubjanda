@@ -62,6 +62,7 @@ $app->singleton(
 
 $app->configure('app');
 $app->configure('view');
+$app->configure('mail');
 
 /*
 |--------------------------------------------------------------------------
@@ -113,5 +114,17 @@ $app->router->group([
 ], function ($router) {
     require __DIR__.'/../routes/web.php';
 });
+
+/*
+|--------------------------------------------------------------------------
+| Load The Packages
+|--------------------------------------------------------------------------
+|
+| 
+| 
+| 
+|
+*/
+$app->register(Illuminate\Mail\MailServiceProvider::class); 
 
 return $app;

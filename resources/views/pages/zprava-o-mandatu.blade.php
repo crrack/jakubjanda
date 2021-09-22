@@ -4,22 +4,78 @@
 
 <section class="px-6 pb-6 text-primary md:px-0">
     <div class="max-w-2xl mx-auto">
-        <p class="pb-4 text-xl font-bold">Odeslat zprávu o mandátu</p>
-        <p class="pb-6">Zprávu o mandátu vám odešleme na Váš email</p>
-        <form id="form" class="block md:pr-4" action="http://jakubjanda.cz/contact-form" method="post">
-            <span id="success-message" class="block w-full px-4 py-2 mb-4 text-green-700 bg-green-200">Zpráva byla úspěšně odeslána</span>
+        <p class="pb-6">Zprávu o mandátu Vám odešleme na Váš email</p>
+        <form 
+            x-data="{ 
+                submit() {
+                    let formData = Object.fromEntries(new FormData($el).entries());
 
-            <label for="name">Jméno: </label><br>
-            <input type="text" name="name" class="w-full px-4 py-2 mb-2 border border-gray-400">
+                    this.loading = true;
 
-            <label for="surname">Příjmení: </label><br>
-            <input type="text" name="surname" class="w-full px-4 py-2 mb-2 border border-gray-400"><br>
+                    $nextTick(() => { 
+                        fetch(global_url + '/send-pdf/send', {
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Accept': 'application/json, text-plain, */*',
+                                'X-Requested-With': 'XMLHttpRequest'
+                            },
+                            method: 'POST',
+                            credentials: 'same-origin',
+                            body: JSON.stringify(formData)
+                        }).then((response) => {
+                            return response.json()
+                        }).then((response) => {
+                            $nextTick(() => { 
+                                if(response.status == 'done') {
+                                    this.success = true;
+                                    $el.reset();
+                                }else {
+                                    this.fail = true;
+                                }
+                                this.loading = false;
+                            });
+                        });
+                    });
 
+                    
+                    console.log(formData);
+                },
+                loading: false,
+                success: false,
+                fail: false
+            }"
+            x-on:submit.prevent="submit"
+            class="block md:pr-4"
+            method="POST"
+            action="./"
+        >
+            <div x-show="success" x-cloak @click.away="success = false" class="flex items-center justify-center px-8 py-4 mb-4 text-white bg-green-500">
+                Zpráva o mandátu byla odeslána na Váš email.
+            </div>
+            <div x-show="fail" x-cloak @click.away="fail = false" class="flex items-center justify-center px-8 py-4 mb-4 text-white bg-red-600">
+                Odeslání se nepodařilo, zkuste to prosím později.
+            </div>
+            <p class="mb-2 text-xl font-bold">Odeslat zprávu o mandátu:</p>
+    
+            <span id="success-message" class="hidden w-full px-4 py-2 mb-4 text-green-700 bg-green-200">Zpráva byla úspěšně odeslána</span>
+    
+            <label for="first_name">Jméno: </label><br>
+            <input id="first_name" type="text" name="first_name" class="w-full px-4 py-2 mb-2 border-2 border-gray-300 focus:border-primary" required>
+    
+            <label for="sur_name">Příjmení: </label><br>
+            <input id="sur_name" type="text" name="sur_name" class="w-full px-4 py-2 mb-2 border-2 border-gray-300 focus:border-primary" required><br>
+    
             <label for="email">Váš email: </label><br>
-            <input type="email" name="email" class="w-full px-4 py-2 mb-2 border border-gray-400"><br>
-
-            <label for="text">Váš dotaz</label><br>
-            <input id="submit" type="submit" value="Odeslat" class="tracking-wide text-white btn bg-primary">
+            <input id="email" type="email" name="email" class="w-full px-4 py-2 mb-6 border-2 border-gray-300 focus:border-primary" required><br>
+    
+            <button type="submit" name="submit" class="tracking-wide text-white transition duration-500 ease-in-out bg-green-500 btn " :class="{ 'opacity-60': loading }">
+                <span class="px-2">Odeslat</span>
+                <div x-cloak x-show="loading" class="relative inline-flex items-center px-1 py-1">
+                    <svg class="absolute animate-spin" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M13.75 22c0 .966-.783 1.75-1.75 1.75s-1.75-.784-1.75-1.75.783-1.75 1.75-1.75 1.75.784 1.75 1.75zm-1.75-22c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm10 10.75c.689 0 1.249.561 1.249 1.25 0 .69-.56 1.25-1.249 1.25-.69 0-1.249-.559-1.249-1.25 0-.689.559-1.25 1.249-1.25zm-22 1.25c0 1.105.896 2 2 2s2-.895 2-2c0-1.104-.896-2-2-2s-2 .896-2 2zm19-8c.551 0 1 .449 1 1 0 .553-.449 1.002-1 1-.551 0-1-.447-1-.998 0-.553.449-1.002 1-1.002zm0 13.5c.828 0 1.5.672 1.5 1.5s-.672 1.501-1.502 1.5c-.826 0-1.498-.671-1.498-1.499 0-.829.672-1.501 1.5-1.501zm-14-14.5c1.104 0 2 .896 2 2s-.896 2-2.001 2c-1.103 0-1.999-.895-1.999-2s.896-2 2-2zm0 14c1.104 0 2 .896 2 2s-.896 2-2.001 2c-1.103 0-1.999-.895-1.999-2s.896-2 2-2z"/>
+                    </svg>
+                </div>
+            </button>
         </form>
     </div>
 </section>
