@@ -9,14 +9,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <link href="{{ url('css/app.css') }}" rel="stylesheet">
-        <link href="http://jakubjanda.cz/theme/addons/slick/slick.css" rel="stylesheet">
+        <link href="{{ url('css/slick.css') }}" rel="stylesheet">
 
         {{-- Include Alpine.js and Webdo scripts --}}
         @include('webdo.scripts')
 
         <script src="//code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"></script>
         <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
-        <script src="http://jakubjanda.cz/theme/addons/slick/slick.min.js" type="text/javascript"></script>
+        <script src="{{ url('js/slick.min.js') }}" type="text/javascript"></script>
     </head>
     {{-- <body @link.window="link($event.detail)" x-data="root" x-init="init"> --}}
     <body x-data="root" x-init="init">
