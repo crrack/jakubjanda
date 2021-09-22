@@ -1,5 +1,5 @@
 <div>
-    <section x-data="{show: true}" x-show="show" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40">
+    <section x-data="{show: true}" x-show="show" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40">
         <div class="relative w-full max-w-lg px-10 py-8 mb-12 bg-white text-primary" @click.away="show = false">
             <h4 class="mb-1 text-2xl font-bold">Zpráva o mandátu</h4>
             <p class="mb-4">Nechte si poslat naši zprávu o mandátu na Váš email.</p>
