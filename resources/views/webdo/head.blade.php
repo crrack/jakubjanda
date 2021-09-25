@@ -3,6 +3,8 @@
 <meta name="description" content="{{ $meta['meta_description'] ?? null }}">
 <meta name="keywords" content="{{ $meta['meta_keywords'] ?? null }}">
 
+<meta property="og:image" content="./img/fb-img.jpg">
+
 <style>
     [x-cloak] { 
         display: none !important; 

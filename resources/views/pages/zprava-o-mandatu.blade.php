@@ -4,10 +4,23 @@
 
 <section class="px-6 pb-6 text-primary md:px-0">
     <div class="max-w-2xl mx-auto">
-        <a href="http://mandat.webdo.cz/zprava.pdf" target="_blank" class="my-8 tracking-wide text-white btn bg-primary">
-            Zpráva o mandátu v PDF
-        </a>   
-        <p class="pb-6">Nebo nám napište Vaši adresu a my vám zprávu o mandátu pošleme do vaší schránky.</p>
+        <p>
+            "Skládat voličům účty." Heslo, které často zaznívá z úst politiků a pod kterým si asi lze představit leccos. Rozhodl jsem se proto, že nezůstanu u slov, hodím všechno pěkně na papír a udělám z toho kompletní přehled. Nakonec vznikla skoro čtyřicetistránková brožura, která nese příznačný název "Zpráva o mém mandátu." :)
+            <br><br>
+            Najdete v ní téměř vše, co jsem čtyři roky dělal, co se mi podařilo a povedlo, ale i to, co zůstalo u rozdělané práce. 
+            <br><br>
+            Když jsem před čtyřmi lety nastupoval do Sněmovny, hrozně se mi líbilo Masarykovské "Drobná práce pozitivní." A toho jsem se držel celé čtyři roky. Není totiž pravda, že jako jednotlivec ve Sněmovně ničeho nedosáhnete. Jde to i z opozice! Pravda, mnohdy narazíte čelem do zdi, ale jde o to vstát a znovu to znovu. A znovu a znovu.
+            <br><br>
+            Pokud mi to navíc za  14 dní dovolíte, onu rozdělanou práci dotáhnu do konce! 
+            <br><br>
+            Přeju příjemné čtení! :)
+        </p>
+        <div class="flex justify-center">
+            <a href="http://mandat.webdo.cz/zprava.pdf" target="_blank" class="my-8 tracking-wide text-white btn bg-primary">
+                Zpráva o mandátu v PDF
+            </a>  
+        </div> 
+        <p class="pb-6">Nebo mi napište Vaši adresu a já vám zprávu o mandátu pošlu do vaší schránky.</p>
         <form 
             x-data="{ 
                 submit() {
