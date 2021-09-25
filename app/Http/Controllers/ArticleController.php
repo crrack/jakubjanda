@@ -21,7 +21,7 @@ class ArticleController extends Controller
             [
                 'page' => 'clanky',
                 'articles' => [
-                    'limit' => 100,
+                    'limit' => 10,
                     'page' => $_GET['page'] ?? 1
                 ]
             ]
