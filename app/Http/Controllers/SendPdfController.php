@@ -12,7 +12,7 @@ class SendPdfController extends Controller
 {
     public function send(Request $request)
     {
-        $email = $request->input('email');
+        $email = $request->all();
 
         //$body = array_merge($request->all(), ['campaign' => 'brožura']);
 
@@ -23,8 +23,8 @@ class SendPdfController extends Controller
 
         try {
 
-            Mail::to($email)->send(new SendPdf());
-
+            Mail::to('jakubjanda@jakubjanda.cz')->send(new SendPdf($email));
+            
             return ['status' => 'done'];
 
         } catch (\Exception $e) {

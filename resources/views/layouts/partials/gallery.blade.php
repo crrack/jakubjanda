@@ -1,14 +1,14 @@
 <section class="pt-12">
     <div class="gallery">
-        <img src="http://jakubjanda.cz/theme/img/gallery/1.png" alt="Obrázek galerie 1">
-        <img src="http://jakubjanda.cz/theme/img/gallery/2.png" alt="Obrázek galerie 2">
-        <img src="http://jakubjanda.cz/theme/img/gallery/3.png" alt="Obrázek galerie 3">
-        <img src="http://jakubjanda.cz/theme/img/gallery/4.png" alt="Obrázek galerie 4">
-        <img src="http://jakubjanda.cz/theme/img/gallery/5.png" alt="Obrázek galerie 5">
-        <img src="http://jakubjanda.cz/theme/img/gallery/6.png" alt="Obrázek galerie 6">
-        <img src="http://jakubjanda.cz/theme/img/gallery/7.png" alt="Obrázek galerie 7">
-        <img src="http://jakubjanda.cz/theme/img/gallery/8.png" alt="Obrázek galerie 8">
-        <img src="http://jakubjanda.cz/theme/img/gallery/9.png" alt="Obrázek galerie 9">
+        <img src="./img/gallery/1.png" alt="Obrázek galerie 1">
+        <img src="./img/gallery/2.png" alt="Obrázek galerie 2">
+        <img src="./img/gallery/3.png" alt="Obrázek galerie 3">
+        <img src="./img/gallery/4.png" alt="Obrázek galerie 4">
+        <img src="./img/gallery/5.png" alt="Obrázek galerie 5">
+        <img src="./img/gallery/6.png" alt="Obrázek galerie 6">
+        <img src="./img/gallery/7.png" alt="Obrázek galerie 7">
+        <img src="./img/gallery/8.png" alt="Obrázek galerie 8">
+        <img src="./img/gallery/9.png" alt="Obrázek galerie 9">
     </div>
 </section>
 <script type="text/javascript">

@@ -23,7 +23,7 @@ class ContactFormController extends Controller
 
         try {
 
-            Mail::to('o.stepan@outlook.com')->send(new ContactForm($email));
+            Mail::to('jakubjanda@jakubjanda.cz')->send(new ContactForm($email));
 
             return ['status' => 'done'];
 

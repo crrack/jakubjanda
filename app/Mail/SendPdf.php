@@ -12,13 +12,19 @@ class SendPdf extends Mailable
     use Queueable, SerializesModels;
 
     /**
+     * The order instance.
+     *
+     */
+    protected $email;
+
+    /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($email)
     {
-
+        $this->email = $email;
     }
 
     /**
@@ -28,7 +34,7 @@ class SendPdf extends Mailable
      */
     public function build()
     {
-        return $this->view('mail.send-pdf')
+        return $this->view('mail.send-pdf', ['email' => $this->email])
             ->from("noreply@jakubjanda.cz", "Jakub Janda")
             ->replyTo("jakubjanda@jakubjanda.cz", "Jakub Janda")
             ->subject("Zpráva o mandátu");

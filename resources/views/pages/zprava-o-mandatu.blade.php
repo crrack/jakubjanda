@@ -65,9 +65,18 @@
             <label for="sur_name">Příjmení: </label><br>
             <input id="sur_name" type="text" name="sur_name" class="w-full px-4 py-2 mb-2 border-2 border-gray-300 focus:border-primary" required><br>
     
-            <label for="email">Váš email: </label><br>
-            <input id="email" type="email" name="email" class="w-full px-4 py-2 mb-6 border-2 border-gray-300 focus:border-primary" required><br>
+            <label for="street">Ulice: </label><br>
+            <input id="street" type="text" name="street" class="w-full px-4 py-2 mb-6 border-2 border-gray-300 focus:border-primary" required><br>
     
+            <label for="number">Číslo popisné: </label><br>
+            <input id="number" type="text" name="number" class="w-full px-4 py-2 mb-6 border-2 border-gray-300 focus:border-primary" required><br>
+    
+            <label for="city">Město: </label><br>
+            <input id="city" type="text" name="city" class="w-full px-4 py-2 mb-6 border-2 border-gray-300 focus:border-primary" required><br>
+
+            <label for="post_code">PSČ: </label><br>
+            <input id="post_code" type="text" name="post_code" class="w-full px-4 py-2 mb-6 border-2 border-gray-300 focus:border-primary" required><br>
+
             <button type="submit" name="submit" class="tracking-wide text-white transition duration-500 ease-in-out bg-green-500 btn " :class="{ 'opacity-60': loading }">
                 <span class="px-2">Odeslat</span>
                 <div x-cloak x-show="loading" class="relative inline-flex items-center px-1 py-1">

@@ -93,10 +93,10 @@
             <div class="md:w-1/2">
                 <p class="text-xl font-bold">Sociální sítě:</p>
                 <div class="mb-6 text-sm leading-relaxed sm:flex md:block lg:flex">
-                    <a href="https://www.facebook.com/jandysj" class="block w-32 h-10 px-3 py-2 mb-2 mr-2 rounded-lg bg-secondary"><img src="http://jakubjanda.cz/theme/img/facebook-dark.svg" class="float-left h-6 mr-2" alt="">Facebook</a>
-                    <a href="https://www.instagram.com/jandys.j/" class="block w-32 h-10 px-3 py-2 mb-2 mr-2 rounded-lg bg-secondary"><img src="http://jakubjanda.cz/theme/img/instagram-dark.svg" class="float-left h-6 mr-2" alt="">Instagram</a>
-                    <a href="https://twitter.com/jandysj" class="block w-32 h-10 px-3 py-2 mb-2 mr-2 rounded-lg bg-secondary"><img src="http://jakubjanda.cz/theme/img/twitter-dark.svg" class="float-left h-6 mr-2" alt="">Twitter</a>
-                    <a href="https://www.youtube.com/channel/UCQid7UGiK0dZ3JIgRG5yNXA" class="block w-32 h-10 px-3 py-2 mb-2 rounded-lg bg-secondary"><img src="http://jakubjanda.cz/theme/img/youtube-dark.svg" class="float-left h-6 mr-2" alt="">Youtube</a>
+                    <a href="https://www.facebook.com/jandysj" class="block w-32 h-10 px-3 py-2 mb-2 mr-2 rounded-lg bg-secondary"><img src="./img/facebook-dark.svg" class="float-left h-6 mr-2" alt="">Facebook</a>
+                    <a href="https://www.instagram.com/jandys.j/" class="block w-32 h-10 px-3 py-2 mb-2 mr-2 rounded-lg bg-secondary"><img src="./img/instagram-dark.svg" class="float-left h-6 mr-2" alt="">Instagram</a>
+                    <a href="https://twitter.com/jandysj" class="block w-32 h-10 px-3 py-2 mb-2 mr-2 rounded-lg bg-secondary"><img src="./img/twitter-dark.svg" class="float-left h-6 mr-2" alt="">Twitter</a>
+                    <a href="https://www.youtube.com/channel/UCQid7UGiK0dZ3JIgRG5yNXA" class="block w-32 h-10 px-3 py-2 mb-2 rounded-lg bg-secondary"><img src="./img/youtube-dark.svg" class="float-left h-6 mr-2" alt="">Youtube</a>
                 </div>
                 <p class="text-xl font-bold">Regionální kancelář - Ostrava</p>
                 <iframe src="https://maps.google.com/maps?q=Sokolsk%C3%A1%20t%C5%99%C3%ADda%201204%2F8%2C%20702%2000%20Ostrava&amp;t=&amp;z=7&amp;ie=UTF8&amp;iwloc=&amp;output=embed" scrolling="no" marginheight="0" marginwidth="0" width="100%" height="200" frameborder="0"></iframe>

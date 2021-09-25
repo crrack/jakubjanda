@@ -1,17 +1,28 @@
 <div>
-    <section x-data="{show: true}" x-show="show" class="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40">
-        <div class="relative w-full max-w-lg px-10 py-8 mb-12 bg-white text-primary" @click.away="show = false">
-            <h4 class="mb-1 text-2xl font-bold">Zpráva o mandátu</h4>
-            <p class="mb-4">Nechte si poslat naši zprávu o mandátu na Váš email.</p>
-            <a x-link="zprava-o-mandatu" class="tracking-wide text-white btn bg-primary">
-                Přejít na stránku o mandátu
-            </a>
-            <button @click="show = false" class="absolute top-4 right-4">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-            </button>
+    <section 
+        x-data="{
+            show: $persist(true).as('show-mandat-modal')
+        }"
+        x-cloak
+        x-show="show" 
+        class="fixed inset-0 z-50 flex flex-col items-center justify-around bg-black bg-opacity-50"
+    >
+        <div 
+            style="background-image: url('img/mandat.png');width: 315px;height: 435px;" 
+            class="relative w-full max-w-lg mb-12 bg-white bg-top bg-cover text-primary" @click.away="show = false"
+        >
+            <div style="" class="relative flex flex-col items-center justify-end w-full h-full px-10 py-4 bg-white text-primary bg-opacity-20" @click.away="show = false">
+                <a x-link="zprava-o-mandatu" class="inline-flex tracking-wide text-white btn bg-primary">
+                    Zpráva o mandátu
+                </a>
+                <button @click="show = false" class="absolute top-4 right-4">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
         </div>
+        <div></div>
     </section>
     <section class="header">
         <div class="flex flex-col-reverse content md:flex-row">
@@ -150,28 +161,28 @@
         </h1>
         <div class="justify-center px-8 content md:flex">
             <a href="https://www.facebook.com/jandysj" class="flex mx-4 my-4 text-center social-link facebook-bg md:block" target="_blank">
-                <img src="http://jakubjanda.cz/theme/img/facebook.svg" alt="Facebook stránka" class="h-12 mx-6 my-6 md:mx-auto">
+                <img src="./img/facebook.svg" alt="Facebook stránka" class="h-12 mx-6 my-6 md:mx-auto">
                 <span class="flex-grow py-5 pr-0 text-lg font-bold text-white md:">
                     Jakub Janda <br>
                     Facebook
                 </span>
             </a>
             <a href="https://www.instagram.com/jandys.j/" class="flex mx-4 my-4 text-center social-link instagram-bg md:block" target="_blank">
-                <img src="http://jakubjanda.cz/theme/img/instagram.svg" alt="Instagram stránka" class="h-12 mx-6 my-6 md:mx-auto">
+                <img src="./img/instagram.svg" alt="Instagram stránka" class="h-12 mx-6 my-6 md:mx-auto">
                 <span class="flex-grow py-5 pr-0 text-lg font-bold text-white md:">
                     Jakub Janda <br>
                     Instagram
                 </span>
             </a>
             <a href="https://twitter.com/jandysj" class="flex mx-4 my-4 text-center social-link twitter-bg md:block" target="_blank">
-                <img src="http://jakubjanda.cz/theme/img/twitter.svg" alt="Twitter stránka" class="h-12 mx-6 my-6 md:mx-auto">
+                <img src="./img/twitter.svg" alt="Twitter stránka" class="h-12 mx-6 my-6 md:mx-auto">
                 <span class="flex-grow py-5 pr-0 text-lg font-bold text-white md:">
                     Jakub Janda <br>
                     Twitter
                 </span>
             </a>
             <a href="https://www.youtube.com/channel/UCQid7UGiK0dZ3JIgRG5yNXA" class="flex mx-4 my-4 text-center social-link youtube-bg md:block" target="_blank">
-                <img src="http://jakubjanda.cz/theme/img/youtube.svg" alt="Youtube stránka" class="h-12 mx-6 my-6 md:mx-auto">
+                <img src="./img/youtube.svg" alt="Youtube stránka" class="h-12 mx-6 my-6 md:mx-auto">
                 <span class="flex-grow py-5 pr-0 text-lg font-bold text-white md:">
                     Jakub Janda <br>
                     YouTube
