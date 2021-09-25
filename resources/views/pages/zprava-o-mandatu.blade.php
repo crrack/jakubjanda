@@ -4,7 +4,7 @@
 
 <section class="px-6 pb-6 text-primary md:px-0">
     <div class="max-w-2xl mx-auto">
-        <a href="{{ url('files/mandat.pdf') }}" target="_blank" class="my-8 tracking-wide text-white btn bg-primary">
+        <a href="http://mandat.webdo.cz/zprava.pdf" target="_blank" class="my-8 tracking-wide text-white btn bg-primary">
             Zpráva o mandátu v PDF
         </a>   
         <p class="pb-6">Nebo nám napište Vaši adresu a my vám zprávu o mandátu pošleme do vaší schránky.</p>
