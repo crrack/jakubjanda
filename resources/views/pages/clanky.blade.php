@@ -12,7 +12,7 @@
                     <div style="background: url('./img/post-img.jpg');" class="hidden mx-auto bg-indigo-200 post-img md:block">
                     </div>
                 @endif
-                <a class="relative flex-grow block px-8 py-8 md:py-0" x-link="{{ url('clanek/' . $article['slug']) }}" href="{{ url('clanek/' . $article['slug']) }}">
+                <a x-link="{{ url('clanek/' . $article['slug']) }}" class="relative flex-grow block px-8 py-8 md:py-0">
                     <h2 class="text-2xl font-bold leading-tight md:pt-8 md:pb-2">{{ $article['title'] }}</h2>
                     <p>{{ $article['teaser'] }}...</p>
                     <span class="absolute bottom-0 right-0 pb-5 pr-8 text-sm">

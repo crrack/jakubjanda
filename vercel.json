@@ -11,7 +11,7 @@
             "headers": { "Location": "https://janda.webdo.cz/" } 
         },
         {
-            "src": "/(css|js|img)/(.*)",
+            "src": "/(css|js|img|files)/(.*)",
             "dest": "public/$1/$2"
         },
         {

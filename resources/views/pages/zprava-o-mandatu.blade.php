@@ -4,7 +4,10 @@
 
 <section class="px-6 pb-6 text-primary md:px-0">
     <div class="max-w-2xl mx-auto">
-        <p class="pb-6">Zprávu o mandátu Vám odešleme na Váš email</p>
+        <a href="{{ url('files/mandat.pdf') }}" target="_blank" class="my-8 tracking-wide text-white btn bg-primary">
+            Zpráva o mandátu v PDF
+        </a>   
+        <p class="pb-6">Nebo nám napište Vaši adresu a my vám zprávu o mandátu pošleme do vaší schránky.</p>
         <form 
             x-data="{ 
                 submit() {
@@ -50,7 +53,7 @@
             action="./"
         >
             <div x-show="success" x-cloak @click.away="success = false" class="flex items-center justify-center px-8 py-4 mb-4 text-white bg-green-500">
-                Zpráva o mandátu byla odeslána na Váš email.
+                Zpráva o mandátu vám brzy příjde do vaší schránky.
             </div>
             <div x-show="fail" x-cloak @click.away="fail = false" class="flex items-center justify-center px-8 py-4 mb-4 text-white bg-red-600">
                 Odeslání se nepodařilo, zkuste to prosím později.
