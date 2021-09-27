@@ -7,7 +7,24 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="robots" content="index, follow">
+	    <meta name="googlebot" content="index, follow, snippet, archive">
+
+        <meta name="description" content="Oficiální stránka poslance Parlamentu České republiky Jakuba Jandy.">
+        <meta name="keywords" content="politik,poslanec,ods,Moravskoslezký kraj,politika,Jakub Janda, volby">
+
+        <meta property="og:title" content="Jakub Janda, Váš poslanec za Občanskou demokratickou stranu">
+        <meta itemprop="name" content="Jakub Janda, Váš poslanec - Vždy bojuji čestně. Jak ve sportu, tak v politice.">
+    
+        <meta property="og:description" content="Oficiální webová stránka poslance Parlamentu České republiky Jakuba Jandy.">
+        <meta itemprop="description" content="Oficiální webová stránka poslance Parlamentu České republiky Jakuba Jandy.">
         
+        <meta property="og:image" content="http://jakubjanda.cz/theme/img/photo.png">
+        <meta itemprop="image" content="http://jakubjanda.cz/theme/img/photo.png">
+        
+        <meta property="og:image" content="./img/fb-img.jpg">
+        <meta property="og:locale" content="cs_CZ">
+
         <link href="{{ url('css/app.css') }}" rel="stylesheet">
         <link href="{{ url('css/slick.css') }}" rel="stylesheet">
 
@@ -18,6 +35,15 @@
         <script src="//code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"></script>
         <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
         <script src="{{ url('js/slick.min.js') }}" type="text/javascript"></script>
+    
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158088453-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-158088453-1');
+        </script>
     </head>
     {{-- <body @link.window="link($event.detail)" x-data="root" x-init="init"> --}}
     <body x-data="root" x-init="init">
