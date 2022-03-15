@@ -131,8 +131,8 @@
                 NEJNOVĚJŠÍ <br class="hidden lg:block">ČLÁNEK
             </div>
             <div class="px-4 lg:w-3/4 bg-secondary md:flex md:px-0">
-                @if(isset($article['thumbnail']['static']))
-                    <div style="background: url('{{ $article['thumbnail']['static'] }}');" class="hidden mx-auto bg-indigo-200 post-img md:block">
+                @if(isset($article['media']['thumbnail-static']['md']['url']))
+                    <div style="background: url('{{ $article['media']['thumbnail-static']['md']['url'] }}');" class="hidden mx-auto bg-indigo-200 post-img md:block">
                     </div>
                 @else
                     <div style="background: url('./img/post-img.jpg');" class="hidden mx-auto bg-indigo-200 post-img md:block">

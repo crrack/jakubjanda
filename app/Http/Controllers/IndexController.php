@@ -20,7 +20,9 @@ class IndexController extends Controller
                 'return' => [
                     'article' => [
                         'collection' => 'articles',
-                        'limit' => 1
+                        'doesntHaveTaxonomies' => ['napsali-o-mne'],
+                        'limit' => 1,
+                        'singleMedia' => ['thumbnail-static']
                     ],
                     'page' => [
                         'collection' => 'pages',
