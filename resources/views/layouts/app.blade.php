@@ -10,19 +10,9 @@
         <meta name="robots" content="index, follow">
 	    <meta name="googlebot" content="index, follow, snippet, archive">
 
-        <meta name="description" content="Oficiální stránka poslance Parlamentu České republiky Jakuba Jandy.">
-        <meta name="keywords" content="politik,poslanec,ods,Moravskoslezký kraj,politika,Jakub Janda, volby">
-
-        <meta property="og:title" content="Jakub Janda, Váš poslanec za Občanskou demokratickou stranu">
-        <meta itemprop="name" content="Jakub Janda, Váš poslanec - Vždy bojuji čestně. Jak ve sportu, tak v politice.">
-    
-        <meta property="og:description" content="Oficiální webová stránka poslance Parlamentu České republiky Jakuba Jandy.">
-        <meta itemprop="description" content="Oficiální webová stránka poslance Parlamentu České republiky Jakuba Jandy.">
+        <meta property="og:image" content="{{ url('img/photo.png') }}">
+        <meta itemprop="image" content="{{ url('img/photo.png') }}">
         
-        <meta property="og:image" content="http://jakubjanda.cz/theme/img/photo.png">
-        <meta itemprop="image" content="http://jakubjanda.cz/theme/img/photo.png">
-        
-        <meta property="og:image" content="./img/fb-img.jpg">
         <meta property="og:locale" content="cs_CZ">
 
         <link href="{{ url('css/app.css') }}" rel="stylesheet">
