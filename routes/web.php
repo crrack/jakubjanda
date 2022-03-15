@@ -15,7 +15,11 @@
 
 $router->get('/', ['as' => 'home-page', 'uses' => 'IndexController@show']);
 $router->get('clanky', ['uses' => 'ArticleController@all']);
+$router->get('clanky/{category}', ['uses' => 'ArticleController@all']);
 $router->get('clanek/{slug}', ['uses' => 'ArticleController@show']);
+
+$router->get('zivotopis', ['uses' => 'ZivotopisController@show']);
+$router->get('videa', ['uses' => 'VideoController@show']);
 
 $router->post('contact-form/send', ['uses' => 'ContactFormController@send']);
 $router->post('send-pdf/send', ['uses' => 'SendPdfController@send']);

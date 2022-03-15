@@ -17,15 +17,19 @@ class IndexController extends Controller
     {
         $data = $this->call_content(
             [
-                'page' => 'index',
-                'articles' => [
-                    'limit' => 1
+                'return' => [
+                    'article' => [
+                        'collection' => 'articles',
+                        'limit' => 1
+                    ],
+                    'page' => [
+                        'collection' => 'pages',
+                        'findBySlug' => 'index',
+                        'generateSeo' => true
+                    ]
                 ]
             ]
         );
-
-        $data['article'] = $data['articles']['data'][0] ?? null;
-        unset($data['articles']);
 
         return $this->get_view('pages.homepage', '/', $data);
     }

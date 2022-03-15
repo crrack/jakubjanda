@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Actions\Webdo\View;
 
-class PageController extends Controller
+class ZivotopisController extends Controller
 {
     use View;
 
@@ -13,25 +13,24 @@ class PageController extends Controller
      *
      * @return void
      */
-    public function show($page)
+    public function show()
     {
         
         $data = $this->call_content(
-            [ 
+            [
                 'return' => [
+                    'zivotopis' => [
+                        'singleMedia' => ['image']
+                    ],
                     'page' => [
                         'collection' => 'pages',
-                        'findBySlug' => $page,
+                        'findBySlug' => 'zivotopis',
                         'generateSeo' => true
                     ]
                 ]
             ]
         );
 
-        if(view()->exists('pages.' . $page)){
-            return $this->get_view('pages.' . $page, $page, $data);
-        }else {
-            return view('errors.404');
-        }
+        return $this->get_view('pages.zivotopis', 'videa', $data);
     }
 }

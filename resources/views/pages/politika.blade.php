@@ -4,8 +4,8 @@
         <span class="italic">„První povinností vlády je chránit lidi, nikoliv řídit jejich životy.“</span> – Ronald Reagan
     </p>
 </x-title>
-<section class="pb-12">
-    <div class="content text-primary basic-styles">
+<section class="px-6 pb-12">
+    <div class="content text-primary">
         <div
             x-init="
                 $('.priority-slider').slick({
@@ -89,9 +89,20 @@
                         </p>  
                     </div>
                 </div>
-                <script type="text/javascript">
-                    
-                </script>
+            </div>
+            <div class="md:flex pt-8 sm:px-8">
+                <a href="https://www.psp.cz/sqw/detail.sqw?id=6459" target="_blank" class="flex h-44 sm:h-32 mx-4 my-2 bg-primary cursor-pointer md:w-1/2 md:mx-auto lg:mx-4 lg:my-0">
+                    <div class="flex-grow priority text-white">
+                        <p class="text-xl font-bold pt-1 pl-2">O tom, co ve sněmovně navrhuji, si můžete <br class="hidden sm:block md:hidden">prohlédnout ZDE</p>
+                        <span class="float-right pt-3 text-sm">Přejít na odkaz <img src="./img/link-icon.png" alt="" class="inline"></span>
+                    </div>
+                </a>
+                <a href="https://nasipolitici.cz/detail/jakub-janda" target="_blank" class="flex h-44 sm:h-32 mx-4 my-2 bg-gray-700 cursor-pointer md:w-1/2 md:mx-auto lg:mx-4 lg:my-0">
+                    <div class="flex-grow priority text-white">
+                        <p class="text-xl font-bold pt-1 pl-2">Mé hodnocení transparentnosti je k <br class="hidden sm:block md:hidden">nahlédnutí ZDE</p>
+                        <span class="float-right pt-3 text-sm">Přejít na odkaz <img src="./img/link-icon.png" alt="" class="inline"></span>
+                    </div>
+                </a>
             </div>
         </div>
     </div>

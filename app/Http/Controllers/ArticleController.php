@@ -14,30 +14,40 @@ class ArticleController extends Controller
      *
      * @return void
      */
-    public function all()
+    public function all($category = false)
     {
-        
+        $aticlesQuery = [
+            'paginate' => 10,
+            'preview' => true,
+            'paginatePage' => $_GET['page'] ?? 1,
+            'singleMedia' => ['thumbnail-static']
+        ];
+        if($category) $aticlesQuery['hasTaxonomies'] = ['napsali-o-mne'];
+        else $aticlesQuery['doesntHaveTaxonomies'] = ['napsali-o-mne'];
         $data = $this->call_content(
             [
-                'page' => 'clanky',
-                'articles' => [
-                    'limit' => 10,
-                    'page' => $_GET['page'] ?? 1
+                'return' => [
+                    'articles' => $aticlesQuery,
+                    'page' => [
+                        'collection' => 'pages',
+                        'findBySlug' => 'clanky',
+                        'generateSeo' => true
+                    ]
                 ]
             ]
         );
 
         $data['articles'] = new Paginator(
-            $data['articles']['data'], 
-            $data['articles']['pagination']['total'], 
-            $data['articles']['pagination']['per_page'], 
-            $data['articles']['pagination']['current_page'],
+            $data['articles'], 
+            $data['pagination']['articles']['total'], 
+            $data['pagination']['articles']['per_page'], 
+            $data['pagination']['articles']['current_page'],
             ['path' => url('clanky')]
         );
 
         //dd($data['articles']->links());
 
-        return $this->get_view('pages.clanky', 'clanky', $data);
+        return $this->get_view('pages.clanky', 'clanky', array_merge($data, ['category' => $category]));
     }
 
     /**
@@ -49,8 +59,13 @@ class ArticleController extends Controller
     {
         $data = $this->call_content(
             [
-                'page' => 'clanek',
-                'article' => $slug
+                'return' => [
+                    'article' => [
+                        'collection' => 'articles',
+                        'findBySlug' => $slug,
+                        'generateSeo' => true
+                    ]
+                ]
             ]
         );
 
