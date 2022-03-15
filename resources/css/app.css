@@ -8,6 +8,12 @@ body {
   font-family: 'PT Sans', sans-serif;
 }
 
+@media print {
+    .print-hide {
+        display: none;
+    }
+}
+
 .facebook-bg {
     background: #1977f3;
 }

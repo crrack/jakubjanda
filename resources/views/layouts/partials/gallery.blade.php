@@ -1,4 +1,4 @@
-<section class="pt-12">
+<section class="pt-12 print-hide">
     <div class="gallery">
         <img src="https://janda.webdo.cz/storage/files/content/images/3092510832515.png" alt="Obrázek galerie 1">
         <img src="https://janda.webdo.cz/storage/files/content/images/4092565552541.png" alt="Obrázek galerie 2">

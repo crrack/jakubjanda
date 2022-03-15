@@ -90,7 +90,7 @@
                     </div>
                 </div>
             </div>
-            <div class="md:flex pt-8 sm:px-8">
+            <div class="md:flex pt-8 sm:px-8 print-hide">
                 <a href="https://www.psp.cz/sqw/detail.sqw?id=6459" target="_blank" class="flex h-44 sm:h-32 mx-4 my-2 bg-primary cursor-pointer md:w-1/2 md:mx-auto lg:mx-4 lg:my-0">
                     <div class="flex-grow priority text-white">
                         <p class="text-xl font-bold pt-1 pl-2">O tom, co ve sněmovně navrhuji, si můžete <br class="hidden sm:block md:hidden">prohlédnout ZDE</p>

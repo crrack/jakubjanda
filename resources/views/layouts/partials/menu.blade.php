@@ -1,4 +1,4 @@
-<div class="w-1/2">
+<div class="w-1/2 print-hide">
     <button @click="menu_open = true" class="absolute top-0 right-0 px-4 py-5 text-3xl text-gray-800 lg:hidden">
         <img src="./img/menu.svg" alt="Otevřít menu" width="36px">
     </button>

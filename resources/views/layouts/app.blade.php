@@ -73,7 +73,7 @@
 
         @include('layouts.partials.gallery')
         <section>
-            <div class="flex px-4 py-12 content text-primary md:px-0">
+            <div class="flex px-4 py-12 content text-primary md:px-0 print-hide">
                 <div class="w-1/2">
                     Copyright © 2019 Jakub Janda 
                 </div>
