@@ -1,5 +1,5 @@
 <div>
-    <section 
+    {{-- <section 
         x-data="{
             show: $persist(true).as('show-mandat-modal')
         }"
@@ -23,7 +23,7 @@
             </div>
         </div>
         <div></div>
-    </section>
+    </section> --}}
     <section class="header">
         <div class="flex flex-col-reverse content md:flex-row">
             <div class="w-full px-8 md:w-1/2 lg:pr-24 md:py-8 text-primary">
