@@ -9,7 +9,6 @@
                 document.title = '{{ $meta['page_title'] ?? null }}';
             }
         }"
-        x-init="init()"
     >
 @else
     <div>  

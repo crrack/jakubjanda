@@ -13,7 +13,7 @@ trait View
         // get layout if type is not fetch
         if(($_GET['fetch'] ?? false) != 'true')  $body['layout'] = true;
 
-        $response = $this->guzzle_post('api/content', $body);
+        $response = $this->guzzle_post('api/v1/collections', $body);
 
         if(isset($response['error'])) {
             dd($response['error']);

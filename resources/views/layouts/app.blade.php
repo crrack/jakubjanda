@@ -46,7 +46,7 @@
         </script>
     </head>
     {{-- <body @link.window="link($event.detail)" x-data="root" x-init="init"> --}}
-    <body x-data="root" x-init="init">
+    <body x-data="root">
         <section class="menu">
             <div class="relative flex content">
               <div class="w-1/2 py-3 pl-8 md:py-5 text-primary">
