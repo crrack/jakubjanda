@@ -25,3 +25,7 @@ $router->post('contact-form/send', ['uses' => 'ContactFormController@send']);
 $router->post('send-pdf/send', ['uses' => 'SendPdfController@send']);
 
 $router->get('{page}', ['uses' => 'PageController@show']);
+
+$router->get('admin', function () {
+    return redirect('https://jakubjanda.headingcms.app');
+});
